@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import dp_draw
+import doublependulum.dp_draw as dp_draw
 import getopt
 import os
 import pygame
@@ -137,10 +137,10 @@ def main():
 
     # initialize the double pendulum
     if lagrangian == True:
-        from dp_lagrangian import DoublePendulumLagrangian
+        from  doublependulum.dp_lagrangian import DoublePendulumLagrangian
         S = DoublePendulumLagrangian(g, m1, m2, t1, t2, w1, w2, L1, L2)
     else:
-        from dp_hamiltonian import DoublePendulumHamiltonian
+        from  doublependulum.dp_hamiltonian import DoublePendulumHamiltonian
         S = DoublePendulumHamiltonian(g, m1, m2, t1, t2, w1, w2, L1, L2)
 
     # E0 = initial mechanical energy of the system
