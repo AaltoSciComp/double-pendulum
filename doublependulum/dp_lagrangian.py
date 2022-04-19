@@ -108,7 +108,7 @@ class DoublePendulumLagrangian:
         g1 = (f1 - a1 * f2) / (1 - a1 * a2)
         g2 = (f2 - a2 * f1) / (1 - a1 * a2)
 
-        return numpy.array([w1, w2, g1, g2])
+        return numpy.array([w1, 0.0, g1, g2])
 
     def time_step(self, dt):
         """
